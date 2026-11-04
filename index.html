@@ -113,10 +113,12 @@ footer a{color:#cfe3e8;text-decoration:none}footer a:hover{color:var(--g)}
 @media(max-width:700px){
 .bar{gap:8px;padding-block:6px}.ctl{gap:6px}
 .brand{gap:9px;min-width:0}.brand img{width:40px;height:40px;box-shadow:0 0 0 2px var(--g),0 3px 8px #0003}
-#lgb,.tg,#bg{width:38px;height:38px;padding:0;border-radius:50%;display:grid;place-items:center;flex:none}
+#lgb,.tg,#bg{width:38px;height:38px;padding:0;border-radius:50%;display:grid;place-items:center;justify-content:center;align-content:center;flex:none}
 #lgb span,#lgb .cv{display:none}
-.tg{background:var(--s)}.tg .kn,.tg .fa-sun{display:none}.tg .fa-moon{color:var(--p2)}
-[data-theme=dark] .tg .fa-moon{display:none}[data-theme=dark] .tg .fa-sun{display:inline;color:var(--g)}
+.tg{background:var(--s);overflow:hidden}.tg .kn,.tg .fa-sun{display:none}
+.tg i{display:block;width:1.1em;height:1.1em;margin:0;line-height:1.1em;text-align:center;font-size:1.05rem;transition:transform .25s}
+.tg .fa-moon{color:var(--p2)}.tg:active i{transform:rotate(-20deg) scale(.9)}
+[data-theme=dark] .tg .fa-moon{display:none}[data-theme=dark] .tg .fa-sun{display:block;color:var(--g)}[data-theme=dark] .tg{border-color:color-mix(in srgb,var(--g) 45%,var(--ln))}
 .lc{display:none}
 .hero .w{padding-block:36px}section{padding:44px 0}.sh{font-size:1.6rem}.sh:after{margin-bottom:18px}
 }
@@ -166,7 +168,7 @@ footer h4{margin-bottom:8px;font-size:.98rem}.ql a{font-size:.88rem;padding:2px 
 <section id="register" class="dk"><div class="w"><h2 class="sh" data-t="rg_t">التسجيل</h2><p class="lead" data-t="rg_p">املأ النموذج وسيُفتح واتساب برسالة جاهزة لترسلها إلى المعهد.</p>
 <div class="fc" style="color:var(--ink)"><form id="rf"><div class="f"><label for="f_n" data-t="f1">الاسم</label><input id="f_n" name="n" autocomplete="name" required></div>
 <div><label for="f_l" data-t="f3">المستوى</label><select id="f_l" name="l"><option>المستوى التمهيدي</option><option>المبتدئ 1</option><option>المبتدئ 2</option><option>المبتدئ 3</option><option>المتوسط 1</option><option>المتوسط 2</option><option>المتوسط 3</option><option>المتقدم 1</option><option>المتقدم 2</option><option>المتقدم 3</option><option>الكامل 1</option><option>الكامل 2</option><option>الكامل 3</option><option>الحوار</option></select></div><div><label for="f_c" data-t="f4">القسم</label><select id="f_c" name="c"><option value="الإخوة" data-t="br">الإخوة</option><option value="الأخوات" data-t="si">الأخوات</option></select></div>
-<div class="f"><label for="f_m" data-t="f5">نمط الدراسة</label><select id="f_m" name="m"><option value="حضوري" data-t="ip">حضوري</option><option value="عن بعد" data-t="ol">عن بعد</option></select></div><div class="f"><label for="f_t" data-t="f6">رسالة (اختياري)</label><textarea id="f_t" name="t" rows="3"></textarea></div>
+<div class="f"><label for="f_m" data-t="f5">نمط الدراسة</label><select id="f_m" name="m"><option value="حضوري" data-t="ip">حضوري</option><option value="عن بعد" data-t="ol">عن بعد</option></select></div><div class="f"><label for="f_t" data-t="f6">رسالة</label><textarea id="f_t" name="t" rows="3"></textarea></div>
 <button class="btn" type="submit"><i class="fa-brands fa-whatsapp"></i><span data-t="send">إرسال عبر واتساب</span></button></form></div></div></section>
 
 <section id="contact"><div class="w"><h2 class="sh" data-t="ct_t">تواصل معنا</h2><div class="g3">
@@ -204,7 +206,7 @@ on_t:"التدريس عن بعد (عبر الشبكة)",on_p:"صفوف عن بع
 co:["أمريكا","ألمانيا","السعودية","دبي","السويد","باكستان","قطر"],
 
 ga_t:"من حياة المعهد",me_t:"المعهد في الإعلام",me_p:"تقارير إعلامية عن نشاط المعهد:",me1:"تقرير عن تزايد الإقبال على تعلم العربية في أفغانستان.",me2:"تقرير عن الأساتذة والطلاب في كابل.",me3:"تقرير تكميلي عن نشاط المعهد.",me4:"تقرير الجزيرة على يوتيوب.",
-rg_t:"التسجيل",rg_p:"املأ النموذج وسيُفتح واتساب برسالة جاهزة لترسلها إلى المعهد.",f1:"الاسم",f3:"المستوى",f4:"القسم",f5:"نمط الدراسة",f6:"رسالة (اختياري)",br:"الإخوة",si:"الأخوات",ip:"حضوري",ol:"عن بعد",send:"إرسال عبر واتساب",
+rg_t:"التسجيل",rg_p:"املأ النموذج وسيُفتح واتساب برسالة جاهزة لترسلها إلى المعهد.",f1:"الاسم",f3:"المستوى",f4:"القسم",f5:"نمط الدراسة",f6:"رسالة",br:"الإخوة",si:"الأخوات",ip:"حضوري",ol:"عن بعد",send:"إرسال عبر واتساب",
 ct_t:"تواصل معنا",ad_l:"العنوان",ph_l:"الهاتف / واتساب",hr_l:"ساعات الدوام",hrs:"6:00 صباحًا – 7:30 مساءً (وعن بعد على مدار الساعة)"},
 fa:{name:"معهد الحجاز برای آموزش زبان عربی",n1:"درباره ما",n2:"برنامه‌ها",n3:"نصاب",n4:"آنلاین",n6:"گالری",n7:"در رسانه‌ها",n8:"ثبت‌نام",
 hsub:"مرکز تخصصی در کابل برای آموزش زبان عربی، زبان قرآن کریم و علوم اسلامی، با نصاب منظم «دلیل العربیة».",
@@ -218,7 +220,7 @@ on_t:"درس‌های آنلاین",on_p:"خدمات آنلاین فعال در 
 co:["امریکا","آلمان","عربستان","دبی","سویدن","پاکستان","قطر"],
 
 ga_t:"گالری",me_t:"معهد در رسانه‌ها",me_p:"گزارش‌های رسانه‌ای دربارهٔ معهد:",me1:"گزارش دربارهٔ افزایش علاقه به یادگیری عربی در افغانستان.",me2:"گزارش دربارهٔ استادان و شاگردان در کابل.",me3:"گزارش تکمیلی دربارهٔ فعالیت معهد.",me4:"گزارش الجزیره در یوتیوب.",
-rg_t:"ثبت‌نام",rg_p:"فرم را پر کنید؛ واتساپ با یک پیام آماده باز می‌شود تا آن را برای معهد ارسال کنید.",f1:"نام",f3:"مرحله",f4:"بخش",f5:"نوع درس",f6:"پیام (اختیاری)",br:"برادران",si:"خواهران",ip:"حضوری",ol:"آنلاین",send:"ارسال از طریق واتساپ",
+rg_t:"ثبت‌نام",rg_p:"فرم را پر کنید؛ واتساپ با یک پیام آماده باز می‌شود تا آن را برای معهد ارسال کنید.",f1:"نام",f3:"مرحله",f4:"بخش",f5:"نوع درس",f6:"پیام",br:"برادران",si:"خواهران",ip:"حضوری",ol:"آنلاین",send:"ارسال از طریق واتساپ",
 ct_t:"تماس با ما",ad_l:"آدرس",ph_l:"تلفن / واتساپ",hr_l:"ساعات کاری",hrs:"۶ صبح تا ۷:۳۰ شام (آنلاین ۲۴ ساعته)"},
 ps:{name:"د عربي ژبې د زده‌کړې الحجاز انستیتوت",n1:"زموږ په اړه",n2:"پروګرامونه",n3:"نصاب",n4:"آنلاین",n6:"ګالرۍ",n7:"رسنۍ",n8:"نوم لیکنه",
 hsub:"په کابل کې د عربي ژبې تخصصي مرکز، د قرآن کریم او اسلامي علومو ژبه، د «دلیل العربیة» منظم نصاب سره.",
@@ -232,7 +234,7 @@ on_t:"آنلاین درسونه",on_p:"آنلاین خدمات په لاندې �
 co:["امریکا","آلمان","سعودي عربستان","دوبی","سویډن","پاکستان","قطر"],
 
 ga_t:"ګالرۍ",me_t:"په رسنیو کې",me_p:"د انستیتوت په اړه رسنیز راپورونه:",me1:"په افغانستان کې د عربي زده‌کړې د زیاتېدونکي ګټې راپور.",me2:"په کابل کې د استادانو او زده‌کوونکو راپور.",me3:"د انستیتوت د فعالیت بشپړوونکی راپور.",me4:"د الجزیره راپور په یوټیوب.",
-rg_t:"نوم لیکنه",rg_p:"فورمه ډکه کړئ؛ واټساپ به د یو چمتو پیغام سره پرانستل شي ترڅو یې انستیتوت ته ولېږئ.",f1:"نوم",f3:"مرحله",f4:"برخه",f5:"د درس ډول",f6:"پیغام (اختیاري)",br:"ورونه",si:"خویندې",ip:"حضوري",ol:"آنلاین",send:"د واټساپ له لارې لېږل",
+rg_t:"نوم لیکنه",rg_p:"فورمه ډکه کړئ؛ واټساپ به د یو چمتو پیغام سره پرانستل شي ترڅو یې انستیتوت ته ولېږئ.",f1:"نوم",f3:"مرحله",f4:"برخه",f5:"د درس ډول",f6:"پیغام",br:"ورونه",si:"خویندې",ip:"حضوري",ol:"آنلاین",send:"د واټساپ له لارې لېږل",
 ct_t:"اړیکه",ad_l:"پته",ph_l:"تلیفون / واټساپ",hr_l:"د کار ساعتونه",hrs:"د سهار ۶ بجو څخه تر ماښام ۷:۳۰ (آنلاین ۲۴ ساعته)"},
 en:{name:"Al-Hejaz Institute for Arabic Language",n1:"About",n2:"Programs",n3:"Curriculum",n4:"Online",n6:"Gallery",n7:"In the media",n8:"Register",
 hsub:"A specialist Arabic-language center in Kabul — the language of the Qur'an and Islamic sciences — built on the structured “Dalil al-Arabiyya” curriculum.",
@@ -246,7 +248,7 @@ on_t:"Online lessons",on_p:"Online classes are active in these countries, availa
 co:["USA","Germany","Saudi Arabia","Dubai","Sweden","Pakistan","Qatar"],
 
 ga_t:"Gallery",me_t:"In the media",me_p:"Media reports about the Institute:",me1:"Report on rising interest in learning Arabic in Afghanistan.",me2:"Report on teachers and students in Kabul.",me3:"Follow-up report on the Institute's work.",me4:"Al Jazeera report on YouTube.",
-rg_t:"Registration",rg_p:"Fill in the form — WhatsApp opens with a ready-made message for you to send to the Institute.",f1:"Name",f3:"Level",f4:"Section",f5:"Study mode",f6:"Message (optional)",br:"Brothers",si:"Sisters",ip:"In person",ol:"Online",send:"Send via WhatsApp",
+rg_t:"Registration",rg_p:"Fill in the form — WhatsApp opens with a ready-made message for you to send to the Institute.",f1:"Name",f3:"Level",f4:"Section",f5:"Study mode",f6:"Message",br:"Brothers",si:"Sisters",ip:"In person",ol:"Online",send:"Send via WhatsApp",
 ct_t:"Contact",ad_l:"Address",ph_l:"Phone / WhatsApp",hr_l:"Hours",hrs:"6:00 AM – 7:30 PM (online 24 hours)"}};
 
 Object.entries({
